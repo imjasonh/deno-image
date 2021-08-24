@@ -8,3 +8,7 @@ for await (const conn of listener) {
     }
   })();
 }
+
+import { assertEquals } from "https://deno.land/std@0.106.0/testing/asserts.ts";
+assertEquals("hello", "hello");
+

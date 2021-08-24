@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-deno compile --allow-net \
+DENO_DIR=vendor/
+
+deno cache --reload --lock=lock.json --lock-write example.js
+deno compile \
+  --lock=lock.json \
+  --allow-net \
   --target x86_64-unknown-linux-gnu \
   example.js 1>&2
 
