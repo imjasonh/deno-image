@@ -5,6 +5,6 @@ deno compile --allow-net \
   example.js 1>&2
 
 crane mutate $(
-  crane append -f <(tar -f - -c example) -t gcr.io/imjasonh/deno -b debian:bullseye          
+  crane append -f <(tar -f - -c example) -t gcr.io/imjasonh/deno -b gcr.io/distroless/cc-debian10
 ) --entrypoint=/example
 
